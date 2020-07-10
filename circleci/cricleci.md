@@ -14,3 +14,5 @@
   - `command`実際の操作
   - `run:タスク内容`と書けるらしい
     - こういうのは内容が後から変更できるのが大事なので省略しない方が良さそう
+  - `no_output_timeout`でタイムアウト時間を指定できる（デフォルトは30分？）
+    - https://circleci.com/docs/ja/2.0/configuration-reference/

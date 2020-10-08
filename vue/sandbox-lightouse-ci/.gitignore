@@ -2,6 +2,8 @@
 node_modules
 /dist
 
+# lighthouse output
+lighthouse-ci
 
 # local env files
 .env.local

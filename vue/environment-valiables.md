@@ -29,3 +29,16 @@ CIの特定タスクのときだけ独自の環境変数を使い、APIのモッ
 1. Vueファイルに`process.env.VUE_APP_TITLE`のときだけ専用テキストを出力する処理を入れる
 1. `vue-cli-service serve --mode test-dev`でアプリケーションを起動する
 1. `test-dev`をつけたときだけ出力が変わるか確認する
+
+### 結果
+
+コミット番号`30fb1a891b42759f06c84573598cbe7343ad1f1b`の状態では出しわけできなかった。
+`console.info(process.env.VUE_APP_TITLE);`環境変数を確認してみたところ、環境変数は`test-development`になっていた。
+
+![](../vue/img/01-environment-valiables.png)
+
+ただ、コード内で環境変数を`VUE_APP_TITLE === test-dev`として条件指定したが、実際は`test-development`なので条件に一致しない→出しわけできない状態になっていた（凡ミス）
+
+```typescript
+return process.env.VUE_APP_TITLE === 'test-dev' ? 'This mode is test-dev.' : '';
+```

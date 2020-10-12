@@ -39,6 +39,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
   get mode() {
+    console.info(process.env.VUE_APP_TITLE);
     return process.env.VUE_APP_TITLE === 'test-dev' ? 'This mode is test-dev.' : '';
   }
 }

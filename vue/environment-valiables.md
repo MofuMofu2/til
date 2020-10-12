@@ -42,3 +42,7 @@ CIの特定タスクのときだけ独自の環境変数を使い、APIのモッ
 ```typescript
 return process.env.VUE_APP_TITLE === 'test-dev' ? 'This mode is test-dev.' : '';
 ```
+
+コミット`8af72802fe628108b7d6e1ddcbf43db1b13c1990`で変数名を修正し、`npm run test-dev`すると画面に`This mode is test-dev.`を表示できた。
+
+![](../vue/img/02-environment-valiables.png)

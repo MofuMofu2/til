@@ -25,3 +25,26 @@ export function sortToppingUseArrow(topping: Array<Topping>) {
     return 0;
   });
 }
+
+/**
+ * 末尾が「E」のものを先頭に並べ替える。並べ替えはアルファベット順
+ * @param topping - トッピング種別
+ */
+export function sortToppingEndWithE(topping: Array<Topping>) {
+  return topping.sort((a, b) => {
+    const typeA = a.type.endsWith("e");
+    if (typeA) {
+      console.log(a.type);
+      if (a.type < b.type) {
+        console.log("return -1" + a.type, b.type);
+        return -1;
+      }
+      if (a.type > b.type) {
+        console.log("return 1" + a.type, b.type);
+        return 1;
+      }
+    }
+    console.log("return 0" + a.type, b.type);
+    return 0;
+  });
+}

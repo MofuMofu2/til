@@ -39,12 +39,11 @@ export function sortToppingEndWithE(topping: Array<Topping>) {
         console.log("return -1" + a.type, b.type);
         return -1;
       }
-      if (a.type > b.type) {
-        console.log("return 1" + a.type, b.type);
-        return 1;
-      }
+      //   if (a.type > b.type) {
+      //     console.log("return 1" + a.type, b.type);
+      //     return 1;
+      //   }
     }
-    console.log("return 0" + a.type, b.type);
     return 0;
   });
 }

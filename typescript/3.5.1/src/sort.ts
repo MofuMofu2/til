@@ -27,7 +27,7 @@ export function sortToppingUseArrow(topping: Array<Topping>) {
 }
 
 /**
- * 末尾が「E」のものを先頭に並べ替える。並べ替えはアルファベット順
+ * 末尾が「E」のものを先頭に並べ替えたかった。並べ替えはアルファベット順
  * @param topping - トッピング種別
  */
 export function sortToppingEndWithE(topping: Array<Topping>) {

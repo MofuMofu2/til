@@ -13,3 +13,15 @@ export function sortTopping(topping: Array<Topping>) {
     return 0;
   });
 }
+
+export function sortToppingUseArrow(topping: Array<Topping>) {
+  return topping.sort((a, b) => {
+    if (a.type < b.type) {
+      return -1;
+    }
+    if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
+}

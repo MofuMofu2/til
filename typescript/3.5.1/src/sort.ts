@@ -47,3 +47,38 @@ export function sortToppingEndWithE(topping: Array<Topping>) {
     return 0;
   });
 }
+
+export function endWithE(topping: Array<Topping>) {
+  let endWithEArray = [];
+  let withOutEArray = [];
+  for (let index = 0; index < topping.length; index++) {
+    if (topping[index].type.endsWith("e")) {
+      endWithEArray.push(topping[index]);
+    } else {
+      withOutEArray.push(topping[index]);
+    }
+  }
+  // 文字列順に並び替える
+  endWithEArray.sort((a, b) => {
+    if (a.type < b.type) {
+      return -1;
+    }
+    if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // 文字列順に並び替える
+  withOutEArray.sort((a, b) => {
+    if (a.type < b.type) {
+      return -1;
+    }
+    if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
+  // くっつけて返す
+  return endWithEArray.concat(withOutEArray);
+}

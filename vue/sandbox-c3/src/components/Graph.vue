@@ -14,7 +14,7 @@ export default class Graph extends Vue {
     this.chart();
   }
 
-chart() {
+  chart() {
     return c3.generate({
       bindto: '#chart',
       data: {
@@ -25,5 +25,6 @@ chart() {
       }
     })
   }
+
 }
 </script>

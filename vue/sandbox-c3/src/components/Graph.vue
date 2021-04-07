@@ -20,7 +20,9 @@ export default class Graph extends Vue {
     return c3.generate({
       bindto: '#chart',
       data: {
+        x: 'x',
         columns: [
+          ['x', '2021-04-01', '2021-04-02','2021-04-03','2021-04-04','2021-04-05','2021-04-06'],
           ['data1', 30, 200, 100, 400, 150, 250],
           ['data2', 50, 20, 10, 40, 15, 25]
         ]

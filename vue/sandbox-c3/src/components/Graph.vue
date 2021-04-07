@@ -1,5 +1,6 @@
 <template>
   <div class="c3-mock">
+    <button @click="update()">update data1</button>
     <div id="chart"></div>
   </div>
 </template>
@@ -26,5 +27,12 @@ export default class Graph extends Vue {
     })
   }
 
+  update() {
+    this.chart().load({
+      columns: [
+        ['data1', 300, 100, 250, 150, 300, 150, 500]
+      ]
+    })
+  }
 }
 </script>

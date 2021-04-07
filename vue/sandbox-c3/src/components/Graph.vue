@@ -10,7 +10,11 @@ import c3 from 'c3'
 
 @Component
 export default class Graph extends Vue {
-  get chart() {
+  mounted() {
+    this.chart();
+  }
+
+chart() {
     return c3.generate({
       bindto: '#chart',
       data: {

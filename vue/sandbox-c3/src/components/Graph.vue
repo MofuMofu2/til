@@ -32,6 +32,9 @@ export default class Graph extends Vue {
       axis: {
         x: {
           type: 'timeseries',
+          tick: {
+            format: '%Y/%m/%d'
+          }
         }
       }
     })

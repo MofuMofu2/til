@@ -33,8 +33,10 @@ export default class Graph extends Vue {
         x: {
           type: 'timeseries',
           tick: {
-            format: '%Y/%m/%d'
-          }
+            format: '%Y/%m/%d',
+            count: 5
+          },
+          localtime: false
         }
       }
     })

@@ -20,14 +20,19 @@ export default class Graph extends Vue {
     return c3.generate({
       bindto: '#chart',
       data: {
-        x: 'x',
         xFormat: '%Y%m%d',
-        columns: [
-          // ['x', '2021-04-01', '2021-04-02','2021-04-03','2021-04-04','2021-04-05','2021-04-06'],
-          ['x', '20210401','20210402','20210403','20210404','20210405','20210406'],
-          ['data1: test', 30, 200, 100, 400, 150, 250],
-          ['data2: mock', 50, 20, 10, 40, 15, 25]
-        ]
+        json: [
+          {name: '20210401', data1: 30, data2: 50},
+          {name: '20210402', data1: 130, data2: 501},
+          {name: '20210403', data1: 320, data2: 502},
+          {name: '20210404', data1: 430, data2: 530},
+          {name: '20210405', data1: 350, data2: 50},
+          {name: '20210406', data1: 307, data2: 450}
+        ],
+        keys: {
+          x: 'name',
+          value: ['data1','data2']
+        }
       },
       axis: {
         x: {

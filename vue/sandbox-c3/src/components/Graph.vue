@@ -34,7 +34,9 @@ export default class Graph extends Vue {
           type: 'timeseries',
           tick: {
             format: '%Y/%m/%d',
-            count: 5
+            culling: {
+              max: 5
+            },
           },
           localtime: false
         }

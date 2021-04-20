@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import c3 from 'c3'
+import { generate } from 'c3'
 
 @Component
 export default class Graph extends Vue {
@@ -17,7 +17,7 @@ export default class Graph extends Vue {
   }
 
   chart() {
-    return c3.generate({
+    return generate({
       bindto: '#chart',
       data: {
         xFormat: '%Y%m%d',

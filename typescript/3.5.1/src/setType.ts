@@ -6,6 +6,7 @@ interface TestType {
 
 let test:any  = {}
 
+// これはType Assertつくが、axiosとかでもらってきたものはつかん。ちょっとわかってないんだと思う
 test = {
   name: 'a',
   stat: 'enabled',

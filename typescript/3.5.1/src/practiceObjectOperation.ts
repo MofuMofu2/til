@@ -20,5 +20,13 @@ function joinParams(param: Object) {
 
 // A,a-B,b
 // console.log(joinParams(object1))
- 
 
+function joinKeyAndParams(param: Object) {
+  // 1. 配列データ[key, value]形式の配列（？）を作成
+  // 2. Array.prototype.map()で配列データに対して&でjoinする
+  // このreturn値にさらにjoinを重ねることも可能
+  return Object.entries(param).map(data => data.join('&'))
+}
+
+// [ 'A&a', 'B&b' ]
+console.log(joinKeyAndParams(object1))

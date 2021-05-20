@@ -30,3 +30,11 @@ function joinKeyAndParams(param: Object) {
 
 // [ 'A&a', 'B&b' ]
 console.log(joinKeyAndParams(object1))
+
+function joinAllParams(param: Object){
+  // [ 'A&a', 'B&b' ]の配列を&でさらにつないたテキストを返す
+  return joinKeyAndParams(param).join('&')
+}
+
+//A&a&B&b
+console.log(joinAllParams(object1))

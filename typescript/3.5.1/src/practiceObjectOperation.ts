@@ -2,9 +2,23 @@
 
 import {cookieTopping} from '../src/mock/jsonMock'
 
-// [ '0', { id: '5001', type: 'None' } ],のように、[index番号 + オブジェクト]の配列がキーの数だけ生成される
+const object1 = {
+  A: 'a',
+  B: 'b'
+}
+
 function objectEntries(param: Object) {
   return Object.entries(param)
 }
 
-console.log(objectEntries(cookieTopping))
+// [ [ 'A', 'a' ], [ 'B', 'b' ] ]
+// console.log(objectEntries(object1))
+
+function joinParams(param: Object) {
+  return Object.entries(param).join('-')
+}
+
+// A,a-B,b
+// console.log(joinParams(object1))
+ 
+

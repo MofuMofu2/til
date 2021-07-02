@@ -7,6 +7,23 @@ const object1 = {
   B: 'b'
 }
 
+type ArrayObject = {param1: string, param2: string}
+const arrayObject: ArrayObject[] = [
+  {
+    param1: 'a',
+    param2: 'b'
+  },
+  {
+    param1: 'c',
+    param2: 'd'
+  },
+  {
+    param1: 'delete',
+    param2: 'f'
+  }
+]
+
+
 function objectEntries(param: Object) {
   return Object.entries(param)
 }
@@ -38,3 +55,12 @@ function joinAllParams(param: Object){
 
 //A&a&B&b
 console.log(joinAllParams(object1))
+
+// 特定のvalueが含まれているオブジェクトは取り除く
+function removeParam(param: ArrayObject[]) {
+  const filterd = param.filter(list => list.param1 !== 'delete')
+  return filterd
+}
+
+// [{param1: 'a', param2: 'b'},{param1: 'c', param2: 'd'}]
+console.log(removeParam(arrayObject))

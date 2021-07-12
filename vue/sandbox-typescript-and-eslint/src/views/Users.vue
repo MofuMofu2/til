@@ -1,7 +1,8 @@
 <template>
   <div class="users">
     <h1>params: {{ routeParam }}</h1>
-    <h1>query: {{ queryParam }}</h1>
+    <h1>userId: {{ userId }}</h1>
+    <h1>name: {{ userName }}</h1>
   </div>
 </template>
 <script lang="ts">
@@ -11,9 +12,13 @@ export default Vue.extend({
     routeParam: function() {
       return this.$route.params.id
     },
-    queryParam: function() {
+    userId: function() {
       return this.$route.query.userId
+    },
+    userName: function() {
+      return this.$route.query.name
     }
+
   }
 })
 </script>

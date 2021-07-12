@@ -19,7 +19,7 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/users',
+    path: '/users/:id',
     name: 'Users',
     // route level code-splitting
     // this generates a separate chunk (users.[hash].js) for this route
